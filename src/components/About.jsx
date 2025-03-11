@@ -101,6 +101,7 @@ const About = () => {
                     <img src="/images/Js.png" alt="JavaScript" className="w-full h-auto aspect-square object-cover rounded-lg" />
                     <img src="/images/tailwind.jfif" alt="Tailwind CSS" className="w-full h-auto aspect-square object-cover rounded-lg" />
                     <img src="/images/react.png" alt="React" className="w-full h-auto aspect-square object-cover rounded-lg" />
+                    <img src="/images/redux.png" alt="Redux" className="w-full h-auto aspect-square object-cover rounded-lg" />
                     <img src="/images/github2.jpg" alt="GitHub" className="w-full h-auto aspect-square object-cover rounded-lg" />
                 </div>
             </section>
