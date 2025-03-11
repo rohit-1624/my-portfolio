@@ -69,7 +69,7 @@ const Home = () => {
                             Resume
                             <i className="ri-arrow-right-wide-fill text-3xl animate__animated group-hover:animate__headShake"></i>
                         </button>
-                        <a href="https://github.com/rohit-1624/portfolio" target="_blank" rel="noopener noreferrer"  className="text-blue-600 text-xl pb-3 underline flex items-end ">Portfolio-github</a>
+                        {/* <a href="https://github.com/rohit-1624/portfolio" target="_blank" rel="noopener noreferrer"  className="text-blue-600 text-xl pb-3 underline flex items-end ">Portfolio-github</a> */}
 
                         </div>
                     </div>
