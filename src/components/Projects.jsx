@@ -44,7 +44,7 @@ const projects = [
         github: 'https://github.com/rohit-1624/CRUD-Web-application'
     },
     {
-        title: 'CRUD Web Application',
+        title: 'Online-Shopping (E-commerce)',
         img: '',
         description: 'Developed a responsive e-commerce website using React.js, Tailwind CSS,Firebase, and Razorpay, featuring authentication-based navbar changes, an admin panel for managing products, and secure payments.',
         demo: 'https://online-shopping-beta-eight.vercel.app/',
