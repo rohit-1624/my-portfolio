@@ -1,7 +1,7 @@
 {
   "name": "my-portfolio",
   "private": true,
-  // "homepage": "https://rohit-1624.github.io/my-portfolio",
+  "homepage": "https://my-portfolio-pi-orcin-97.vercel.app/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

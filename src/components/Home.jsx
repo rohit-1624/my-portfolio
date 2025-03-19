@@ -26,9 +26,9 @@ const Home = () => {
     const [index, setIndex] = useState(0)
     const [text, setText] = useState("")
 
-    const useEffect(() => {
-        
-    }, [])
+    // const useEffect(() => {
+
+    // }, [])
 
     const openResume = (e) => {
         e.preventDefault()
