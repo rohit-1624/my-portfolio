@@ -1,7 +1,7 @@
 import React from "react";
 
 const Contact = () => (
-  <section id="contact" className="h-full py-20 bg-[#02050A] text-center flex flex-col justify-center px-8 md:px-16 items-start text-white space-y-4">
+  <section data-aos="fade-up" id="contact" className="h-full py-20 bg-[#02050A] text-center flex flex-col justify-center px-8 md:px-16 items-start text-white space-y-4">
     <h2 className="text-3xl font-bold">Get in Touch</h2>
     <div className="flex flex-col items-start gap-2 text-gray-300">
       <p><span className="text-lg font-semibold">Email :</span> rohitsharmasharma4689@gmail.com</p>

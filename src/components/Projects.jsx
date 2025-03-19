@@ -46,7 +46,7 @@ const projects = [
     {
         title: 'Online-Shopping (E-commerce)',
         img: '',
-        description: 'Developed a responsive e-commerce website using React.js, Tailwind CSS,Firebase, and Razorpay, featuring authentication-based navbar changes, an admin panel for managing products, and secure payments.',
+        description: 'Developed a responsive e-commerce website using React.js, Tailwind CSS, Firebase, and Razorpay, featuring authentication-based navbar changes, an admin panel for managing products, and secure payments.',
         demo: 'https://online-shopping-beta-eight.vercel.app/',
         github: 'https://github.com/rohit-1624/shopcode'
     }
@@ -54,7 +54,8 @@ const projects = [
 
 const ProjectList = () => {
     return (
-        <section id="projects" className="min-h-screen flex flex-col gap-5">
+               
+        <section  data-aos="fade-up"  id="projects" className="min-h-screen flex flex-col gap-5">
             <h1 className="text-4xl text-white mt-0 pl-4 md:pl-13 pt-10 font-bold underline">Projects</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 px-4 md:px-13 text-white">

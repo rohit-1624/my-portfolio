@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 const Home = () => {
     const items = [
@@ -23,6 +23,13 @@ const Home = () => {
         }
     ];
 
+    const [index, setIndex] = useState(0)
+    const [text, setText] = useState("")
+
+    const useEffect(() => {
+        
+    }, [])
+
     const openResume = (e) => {
         e.preventDefault()
         window.open("https://drive.google.com/file/d/1MiGBnFwWdepRpLZgNEHBjPDZkeoG8XfO/view?usp=sharing")
@@ -36,7 +43,7 @@ const Home = () => {
                 <div className="flex flex-col py-4 px-2 bg-[#151E4C] items-center absolute left-0 text-white text-3xl gap-2">
                     {
                         items.map((item, index) => (
-                            <div key={index} className="relative group flex flex-col items-center">
+                            <div key={index} className="relative group flex flex-col items-center z-50">
                                 {/* Icon */}
                                 <div className="p-2 text-white cursor-pointer">
                                     <i className={`${item.icon} text-3xl`}></i>
@@ -46,7 +53,7 @@ const Home = () => {
                                 <div
                                     className={`absolute left-0 top-0 flex items-center gap-2 px-4 py-2 rounded text-white
                                         opacity-0 translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 
-                                        transition-all duration-300 cursor-pointer ${item.color}`}
+                                        transition-all duration-300 cursor-pointer z-50 ${item.color}`}
                                 >
                                     <a href={item.href} target="_blank" rel="noopener noreferrer" >
                                         <i className={`${item.icon} text-3xl`}></i>
@@ -57,7 +64,7 @@ const Home = () => {
                         ))
                     }
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2">
+                <div data-aos="fade-in" className="grid grid-cols-1 md:grid-cols-2">
                     <div className="flex flex-col p-6 md:p-16 pt-1 gap-6 justify-center">
                         <div className="space-y-1 text-white">
                             <h1 className="text-3xl md:text-4xl font-bold">Hi, I'm Rohit!</h1>

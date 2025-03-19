@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 const userData = [
     {
@@ -39,13 +40,19 @@ const userData2 = [
 const About = () => {
     return (
         <div className="bg-[#02050A]">
-            <section id="about" className="min-h-screen flex flex-col gap-5">
-                <h1 className="text-4xl text-white mt-0 pl-4 md:pl-13 pt-10 font-bold underline">About</h1>
+            <section id="about"
+                data-aos="fade-up"
+                className="min-h-screen flex flex-col gap-5">
+                <h1 className="text-4xl text-white mt-0 pl-4 md:pl-13 pt-10 font-bold underline"
+                    style={{
+                        animationDirection: 'normal'
+                    }}
+                >About</h1>
                 <div>
                     <div className="text-lg text-gray-300 px-4 md:px-13">
                         <h3>Hi, My name is Rohit Sharma. I'm a Frontend Web Developer who loves crafting beautiful, interactive, and high-performance web experiences. I'm passionate, detail-oriented, and highly motivated front-end developer with a strong foundation in HTML, CSS, JavaScript, Tailwind CSS, and React.js.</h3>
                     </div>
-                    <div className="flex flex-col justify-center items-center">
+                    <div data-aos="fade-right" className="flex flex-col justify-center items-center">
                         <div className="text-3xl text-white mt-0 pl-4 md:pl-13 pt-10 font-semibold">
                             <h1>Web Developer & Frontend Web Developer !</h1>
                         </div>
@@ -93,9 +100,9 @@ const About = () => {
                 </div>
             </section>
 
-            <section id="skills" className="min-h-screen flex flex-col gap-5">
+            <section data-aos="fade-down" data-aos-duration="1500" id="skills" className="min-h-screen flex flex-col gap-5">
                 <h1 className="text-4xl text-white pl-4 md:pl-13 my-0 pt-0 font-bold underline">Skills</h1>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 p-6 md:p-7">
+                <div   className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 p-6 md:p-7">
                     <img src="/images/html.png" alt="HTML" className="w-full h-auto aspect-square object-cover rounded-lg" />
                     <img src="/images/css.png" alt="CSS" className="w-full h-auto aspect-square object-cover rounded-lg" />
                     <img src="/images/Js.png" alt="JavaScript" className="w-full h-auto aspect-square object-cover rounded-lg" />

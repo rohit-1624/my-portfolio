@@ -24,13 +24,15 @@ const Navbar = () => {
 
     const scrollToSection = (id) => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        setMobileSize(0)
+        
     };
 
     return (
         <div>
             {/* Navbar for Desktop */}
             <div className="hidden md:block">
-                <div className="fixed top-0 left-0 right-0 mx-auto w-11/12 py-4 px-16 bg-[#151C27] flex justify-between items-center">
+                <div className="fixed top-0 left-0 right-0 z-50 mx-auto w-11/12 py-4 px-16 bg-[#151C27] flex justify-between items-center">
                     <div className="flex items-center space-x-2">
                         <img src="/images/logo.png" alt="Logo" className="w-10 h-10" />
                         <h1 className="text-white text-3xl font-bold">Rohit</h1>
