@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+const texts = ["Frontend Developer", "Frontend Web Developer", "React Enthusiast"]
 
 const Home = () => {
     const items = [
@@ -25,16 +26,31 @@ const Home = () => {
 
     const [index, setIndex] = useState(0)
     const [text, setText] = useState("")
+    const [isDeleting, setIsDeleting] = useState(false)
 
-    // const useEffect(() => {
+    useEffect(() => {
+        const typeText = () => {
+            setText((prev) =>
+                isDeleting ? texts[index].substring(0, prev.length - 1): texts[index].substring(0, prev.length + 1)
+            );
 
-    // }, [])
+            if (!isDeleting && text === texts[index]) {
+                setTimeout(() => setIsDeleting(true), 1000);
+            } else if (isDeleting && text === "") {
+                setIsDeleting(false);
+                setIndex((prev) => (prev + 1) % texts.length);
+            }
+        };
+
+        const timer = setTimeout(typeText, isDeleting ? 100 : 200);
+        return () => clearTimeout(timer);
+    }, [text, index, isDeleting]);
 
     const openResume = (e) => {
         e.preventDefault()
         window.open("https://drive.google.com/file/d/1MiGBnFwWdepRpLZgNEHBjPDZkeoG8XfO/view?usp=sharing")
-        target="_blank" 
-        rel="noopener noreferrer"
+        target = "_blank"
+        rel = "noopener noreferrer"
     }
 
     return (
@@ -68,15 +84,28 @@ const Home = () => {
                     <div className="flex flex-col p-6 md:p-16 pt-1 gap-6 justify-center">
                         <div className="space-y-1 text-white">
                             <h1 className="text-3xl md:text-4xl font-bold">Hi, I'm Rohit!</h1>
-                            <h1 className="text-3xl md:text-4xl font-bold">Frontend Developer</h1>
+                            <motion.h1
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 1 }}
+                                className="text-3xl md:text-4xl font-bold"
+                            >{text}
+                                <motion.span
+                                    animate={{ opacity: [1, 0, 1] }}
+                                    transition={{ repeat: Infinity, duration: 0.8 }}
+                                    className="ml-1"
+                                >
+                                    |
+                                </motion.span>
+                            </motion.h1>
                         </div>
                         <p className="text-lg text-gray-300 mt-2">A passionate Frontend Developer dedicated to crafting beautiful, interactive, and high-performance web experiences. I specialize in React.js, Tailwind CSS, and converting modern UI/UX designs into build seamless working user-interface. Let’s bring ideas to life with clean, efficient, and user-friendly code!</p>
                         <div className="flex gap-7">
-                        <button onClick={openResume} className="animate__animated w-fit text-4xl text-white font-semibold cursor-pointer hover:shadow-2xl shadow-md hover:shadow-gray-700 flex gap-1 px-8 py-4 justify-center items-center bg-gradient-to-r from-indigo-500 to-teal-400">
-                            Resume
-                            <i className="ri-arrow-right-wide-fill text-3xl animate__animated group-hover:animate__headShake"></i>
-                        </button>
-                        {/* <a href="https://github.com/rohit-1624/portfolio" target="_blank" rel="noopener noreferrer"  className="text-blue-600 text-xl pb-3 underline flex items-end ">Portfolio-github</a> */}
+                            <button onClick={openResume} className="animate__animated w-fit text-4xl text-white font-semibold cursor-pointer hover:shadow-2xl shadow-md hover:shadow-gray-700 flex gap-1 px-8 py-4 justify-center items-center bg-gradient-to-r from-indigo-500 to-teal-400">
+                                Resume
+                                <i className="ri-arrow-right-wide-fill text-3xl animate__animated group-hover:animate__headShake"></i>
+                            </button>
+                            {/* <a href="https://github.com/rohit-1624/portfolio" target="_blank" rel="noopener noreferrer"  className="text-blue-600 text-xl pb-3 underline flex items-end ">Portfolio-github</a> */}
 
                         </div>
                     </div>
