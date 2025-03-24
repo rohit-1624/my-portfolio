@@ -4,10 +4,10 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 
 ## Features
 - **Home Page** - A brief introduction and overview.
-- **About Me** - Details about my background, skills, and experience.
+- **About Me** - Details about my background, **skills**, and experience.
 - **Projects** - A collection of my personal and professional projects.
 - **Contact** - A section for getting in touch with me.
-- **Footer** - A form is provided for queries and quick links are provided.
+- **Footer** - A **form** is provided for queries and quick links are provided.
 - **Responsive Design** - Optimized for all devices.
 
 ## Technologies Used
