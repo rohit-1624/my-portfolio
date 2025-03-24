@@ -1,4 +1,4 @@
-import { easeOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 const texts = ["Frontend Developer", "Frontend Web Developer", "React Enthusiast"]
 
