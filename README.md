@@ -15,24 +15,6 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 - **Tailwind CSS** - Utility-first CSS framework for styling.
 - **Vercel** - Deployment platform.
 
-## Installation & Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/your-portfolio.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd your-portfolio
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   npm start
-   ```
-
 ## Deployment
 This project is deployed on **Vercel**. You can access it [here](your-live-link.com).
 
