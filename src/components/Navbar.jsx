@@ -10,6 +10,10 @@ const navComp = [
         label: "About"
     },
     {
+        id: "skills",
+        label: "Skills"
+    },
+    {
         id: "projects",
         label: "Projects"
     },
@@ -38,7 +42,7 @@ const Navbar = () => {
                         <h1 className="text-white text-3xl font-bold">Rohit</h1>
                     </div>
 
-                    <ul className="flex space-x-6">
+                    <ul className="flex space-x-4">
                         {
                             navComp.map((item, index) => (
                                 <li key={index}>

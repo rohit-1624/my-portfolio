@@ -37,7 +37,7 @@ const Footer = () => {
         })
     }
     
-
+    
     const submitForm = (e) => {
         e.preventDefault()
 
