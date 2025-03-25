@@ -14,7 +14,7 @@ const Skills = () => {
                 <img src="/images/github2.jpg" alt="GitHub" className="w-full h-auto aspect-square object-cover rounded-lg" />
             </div>
 
-            <h1 className="text-3xl text-white pl-4 md:pl-14 my-2 pt-2 font-bold underline">
+            <h1 data-aos="fade-right" className="text-3xl text-white pl-4 md:pl-14 my-2 pt-2 font-bold underline">
                 My Non-Technical Skills Include:
             </h1>
             <ul className="list-disc list-inside text-xl text-gray-300 pl-6 md:pl-10 text-white space-y-2">
