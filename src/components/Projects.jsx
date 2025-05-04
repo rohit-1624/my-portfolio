@@ -53,7 +53,7 @@ const projects = [
     {
         title: 'Home Decor Website (E-commerce)',
         img: '',
-        description: 'Built Home Decor, a responsive and visually aesthetic e-commerce featuring furniture, home decoration items web application built with Next.js, Tailwind CSS, and Firebase Authentication.'
+        description: 'Built Home Decor, a responsive and visually aesthetic e-commerce featuring furniture, home decoration items web application built with Next.js, Tailwind CSS, and Firebase Authentication.',
         demo: 'https://home-decor-eosin.vercel.app/',
         github: 'https://github.com/rohit-1624/home-decor'
     }
