@@ -48,7 +48,7 @@ const Home = () => {
 
     const openResume = (e) => {
         e.preventDefault()
-        window.open("https://drive.google.com/file/d/1MiGBnFwWdepRpLZgNEHBjPDZkeoG8XfO/view?usp=sharing")
+        window.open("https://drive.google.com/file/d/1AfWOAgtjL2WDQOkZuoVMEoOfzurjV4B5/view?usp=drive_link")
         target = "_blank"
         rel = "noopener noreferrer"
     }

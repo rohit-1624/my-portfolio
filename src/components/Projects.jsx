@@ -49,6 +49,13 @@ const projects = [
         description: 'Developed a responsive e-commerce website using React.js, Tailwind CSS, Firebase, and Razorpay, featuring authentication-based navbar changes, an admin panel for managing products, and secure payments.',
         demo: 'https://online-shopping-beta-eight.vercel.app/',
         github: 'https://github.com/rohit-1624/shopcode'
+    },
+    {
+        title: 'Home Decor Website (E-commerce)',
+        img: '',
+        description: 'Built Home Decor, a responsive and visually aesthetic e-commerce featuring furniture, home decoration items web application built with Next.js, Tailwind CSS, and Firebase Authentication.'
+        demo: 'https://home-decor-eosin.vercel.app/',
+        github: 'https://github.com/rohit-1624/home-decor'
     }
 ];
 
