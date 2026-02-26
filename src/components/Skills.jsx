@@ -4,6 +4,7 @@ const techSkills = [
   { src: "/images/nextjs.png", name: "Next.js" },
   { src: "/images/react.png", name: "React.js" },
   { src: "/images/Js.png", name: "JavaScript" },
+  { src: "/images/typescript.png", name: "TypeScript" },
   { src: "/images/html.png", name: "HTML5" },
   { src: "/images/css.png", name: "CSS3" },
   { src: "/images/tailwind.jfif", name: "Tailwind CSS" },
