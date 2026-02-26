@@ -29,21 +29,23 @@ const Footer = () => {
             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then(() => {
-            setFormData({
-                fullname: "",
-                email: "",
-                message: ""
-            })
-            .catch((error) => {
-                console.error("Error sending message: ", error)
+            setFormData({ fullname: "", email: "", message: "" })
+            Swal.fire({
+                title: 'Success!',
+                text: 'Your message has been sent successfully.',
+                icon: 'success',
+                confirmButtonText: 'OK'
             })
         })
-        Swal.fire({
-            title: 'Success!',
-            text: 'Your message has been sent successfully.',
-            icon: 'success',
-            confirmButtonText: 'OK'
-          });
+        .catch((error) => {
+            console.error("Error sending message: ", error)
+            Swal.fire({
+                title: 'Error!',
+                text: 'Something went wrong. Please try again.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            })
+        })
 
     }
 
