@@ -7,6 +7,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Skills from "./components/Skills";
 import Projects from './components/Projects'
+import Experience from "./components/Experience";
 import Navbar from "./components/Navbar";
 import Contact from './components/Contact';
 import Footer from "./components/Footer";
@@ -21,10 +22,11 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-[#09101A]">
+    <div className="bg-[#09101A] overflow-x-hidden md:pt-0 pt-16">
       <Navbar />
       <Home />
       <About />
+      <Experience />
       <Skills />
       <Projects />
       <Contact />

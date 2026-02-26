@@ -2,25 +2,6 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from 'sweetalert2';
 
-const menus = [
-    {
-        id: "home",
-        label: "Home"
-    },
-    {
-        id: "about",
-        label: "About"
-    },
-    {
-        id: "projects",
-        label: "Projects"
-    },
-    {
-        id: "contact",
-        label: "Contact"
-    }
-];
-
 const Footer = () => {
     const [formData, setFormData] = useState({
         fullname: '',
@@ -41,7 +22,12 @@ const Footer = () => {
     const submitForm = (e) => {
         e.preventDefault()
 
-        emailjs.send("service_71xagoe", "template_8z0btfa", formData, "WnD1AKdOFUhzOmOpL")
+        emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            formData,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
         .then(() => {
             setFormData({
                 fullname: "",
@@ -69,7 +55,7 @@ const Footer = () => {
                 <div className="pr-8">
                     <h1 className="text-white font-semibold text-2xl mb-3">Portfolio</h1>
                     <p className="text-gray-100 mb-6 text-left">
-                        My portfolio showcases my skills as a frontend developer, featuring projects built with React.js, Tailwind CSS, etc. It includes my bio, skills, projects, and contact details for potential opportunities.
+                        A full-stack developer specializing in Next.js, React.js, and Tailwind CSS — building scalable, production-ready web apps with clean architecture and modern UI. Explore my projects, skills, and experience, or reach out for collaboration and opportunities.
                     </p>
                 </div>
 

@@ -29,7 +29,7 @@ const Navbar = () => {
     const scrollToSection = (id) => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
         setMobileSize(0)
-        
+
     };
 
     return (
@@ -61,60 +61,52 @@ const Navbar = () => {
 
             {/* Mobile Sidebar */}
             <div className="md:hidden block">
+                {/* Overlay */}
+                {mobileSize !== 0 && (
+                    <div
+                        className="fixed inset-0 bg-black/50 z-40"
+                        onClick={() => setMobileSize(0)}
+                    />
+                )}
+
+                {/* Sidebar */}
                 <aside
-                    className="bg-[#151C27] fixed top-0 left-0 h-full z-50  overflow-hidden"
-                    style={{
-                        width: mobileSize,
-                        transition: '0.3s',
-                    }}
+                    className="bg-[#151C27] fixed top-0 left-0 h-full z-50 overflow-hidden"
+                    style={{ width: mobileSize, transition: '0.3s' }}
                 >
-                    <div className="flex flex-col bg-[#151C27] hover:text-blue-600">
+                    <div className="flex flex-col">
+                        {/* Menu icon inside sidebar (to close) */}
                         <button
-                            className="text-left mx-4 mt-4"
-                            onClick={() => setMobileSize(mobileSize === 0 ? 280 : 0)}
+                            className="text-left mx-4 mt-4 mb-2"
+                            onClick={() => setMobileSize(0)}
                         >
-                            <i className="ri-menu-2-fill text-white text-xl"></i>
+                            <i className="ri-menu-2-line text-white text-2xl"></i>
                         </button>
-                        {
-                            navComp.map((item, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => scrollToSection(item.id)}
-                                    className="px-4 py-3 text-gray-50 text-[17.5px] hover:bg-rose-600 hover:text-blue-600"
-                                >
-                                    {item.label}
-                                </button>
-                            ))
-                        }
+                        {navComp.map((item, index) => (
+                            <button
+                                key={index}
+                                onClick={() => scrollToSection(item.id)}
+                                className="px-6 py-3 text-gray-50 text-[17.5px] text-left hover:bg-indigo-600 hover:text-white transition"
+                            >
+                                {item.label}
+                            </button>
+                        ))}
                     </div>
                 </aside>
-                <section
-                    className="bg-[#151C27] pt-0"
-                    style={{
-                        transition: '0.3s',
-                    }}
-                >
-                    <nav className="bg-[#151C27] p-6 shadow flex items-center justify-between sticky top-0 left-0">
-                        <div className="flex gap-4 items-center">
-                            <button
-                                className="bg-gray-50 hover:bg-indigo-600 hover:text-white w-8 h-8"
-                                onClick={() => setMobileSize(mobileSize === 0 ? 280 : 0)}
-                            >
-                                <i className="ri-menu-2-line text-xl"></i>
-                            </button>
-                            <h1 className="text-xl text-white rounded font-semibold">Portfolio</h1>
-                        </div>
 
-                        <div>
-                            <button className="relative">
-                                <img
-                                    src="/images/profile-pic.jpeg"
-                                    className="w-12 h-12 rounded-full"
-                                />
-                            </button>
-                        </div>
-                    </nav>
-                </section>
+                {/* Top sticky navbar bar */}
+                <nav className="bg-[#151C27] px-4 py-3 shadow flex items-center justify-between fixed top-0 left-0 right-0 z-30">
+                    <div className="flex gap-4 items-center">
+                        <button
+                            className="bg-gray-50 hover:bg-indigo-600 hover:text-white w-8 h-8 flex items-center justify-center"
+                            onClick={() => setMobileSize(mobileSize === 0 ? 280 : 0)}
+                        >
+                            <i className="ri-menu-2-line text-xl"></i>
+                        </button>
+                        <h1 className="text-xl text-white font-semibold">Portfolio</h1>
+                    </div>
+                    <img src="/images/profile-pic.jpeg" className="w-10 h-10 rounded-full" />
+                </nav>
             </div>
         </div>
     );

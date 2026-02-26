@@ -1,108 +1,46 @@
 import React from "react";
-import { useEffect } from "react";
 
 const userData = [
-    {
-        icon: <i className="ri-arrow-right-wide-fill"></i>,
-        label: 'Birthday',
-        data: '18 Aug 2002'
-    },
-    {
-        icon: <i className="ri-arrow-right-wide-fill"></i>,
-        label: 'Phone',
-        data: '+91 7018304940'
-    },
-    {
-        icon: <i className="ri-arrow-right-wide-fill"></i>,
-        label: 'City',
-        data: 'Baddi, H.P. , India'
-    }
-]
-
-const userData2 = [
-    {
-        icon: <i className="ri-arrow-right-wide-fill"></i>,
-        label: 'Age',
-        data: '22'
-    },
-    {
-        icon: <i className="ri-arrow-right-wide-fill"></i>,
-        label: 'Degree',
-        data: 'Master of Computer Aplication (MCA)'
-    },
-    {
-        icon: <i className="ri-arrow-right-wide-fill"></i>,
-        label: 'Email',
-        data: 'rohitsharmasharma4689@gmail.com'
-    }
-]
+  { icon: "ri-cake-2-line", label: "Birthday", data: "18 Aug 2002" },
+  { icon: "ri-phone-line", label: "Phone", data: "+91 7018304940" },
+  { icon: "ri-map-pin-2-line", label: "City", data: "Baddi, H.P., India" },
+  { icon: "ri-user-3-line", label: "Age", data: (() => { const b = new Date("2002-08-18"); const n = new Date(); let a = n.getFullYear() - b.getFullYear(); if (n < new Date(n.getFullYear(), b.getMonth(), b.getDate())) a--; return String(a); })() },
+  { icon: "ri-graduation-cap-line", label: "Degree", data: "MCA (Master of Computer Application)" },
+  { icon: "ri-mail-line", label: "Email", data: "rohitsharmasharma4689@gmail.com" },
+];
 
 const About = () => {
-    return (
-        <div className="bg-[#02050A]">
-            <section id="about"
-                data-aos="fade-up"
-                className="min-h-screen flex flex-col gap-5">
-                <h1 className="text-4xl text-white mt-0 pl-4 md:pl-13 pt-10 font-bold underline"
-                    style={{
-                        animationDirection: 'normal'
-                    }}
-                >About</h1>
-                <div>
-                    <div className="text-lg text-gray-300 px-4 md:px-13">
-                        <h3>Hi, My name is Rohit Sharma. I'm a Frontend Web Developer who loves crafting beautiful, interactive, and high-performance web experiences. I'm passionate, detail-oriented, and highly motivated front-end developer with a strong foundation in HTML, CSS, JavaScript, Tailwind CSS, and React.js.</h3>
-                    </div>
-                    <div data-aos="fade-right" className="flex flex-col justify-center items-center">
-                        <div className="text-3xl text-white mt-0 pl-4 md:pl-13 pt-10 font-semibold">
-                            <h1>Web Developer & Frontend Web Developer !</h1>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 text-xl w-full p-4 md:p-8 items-center justify-center">
-                            <div>
-                                <ul className="flex flex-col space-x-6">
-                                    {
-                                        userData.map((item, index) => (
-                                            <div className="flex gap-2" key={index}>
-                                                <li>
-                                                    <button
-                                                        className="block py-3 px-4 text-lg font-semibold text-gray-200 hover:text-blue-400 transition"
-                                                    >
-                                                        {item.icon}
-                                                    </button>
-                                                </li>
-                                                <li className="text-white py-3 px-4 text-lg font-semibold">{item.label} :</li>
-                                                <li className="text-gray-300 py-3 px-4 text-lg font-semibold">{item.data}</li>
-                                            </div>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
-                            <div>
-                                <ul className="flex flex-col space-x-6">
-                                    {
-                                        userData2.map((item, index) => (
-                                            <div className="flex gap-2" key={index}>
-                                                <li>
-                                                    <button
-                                                        className="block py-3 px-4 text-lg font-semibold text-white hover:text-blue-400 transition"
-                                                    >
-                                                        {item.icon}
-                                                    </button>
-                                                </li>
-                                                <li className="text-white py-3 px-4 text-lg font-semibold">{item.label} :</li>
-                                                <li className="text-gray-300 py-3 px-4 text-lg font-semibold">{item.data}</li>
-                                            </div>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  return (
+    <div className="bg-[#02050A]">
+      <section
+        id="about"
+        data-aos="fade-up"
+        className="flex flex-col px-4 md:px-13 pt-16 pb-19 gap-6"
+      >
+        {/* Heading */}
+        <h1 className="text-4xl font-bold text-white underline">About</h1>
 
-           
+        {/* Bio */}
+        <div data-aos="fade-right" className="flex flex-col gap-4 max-w-3xl">
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Hi! I'm <span className="text-white font-semibold">Rohit Sharma</span> — a passionate Full Stack Developer with hands-on experience building production-grade platforms using Next.js, React, TypeScript, and Tailwind CSS. Currently pursuing my MCA and open to new opportunities.
+          </p>
         </div>
-    )
-}
+
+        {/* Info Grid */}
+        <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-1 text-lg">
+          {userData.map((item, i) => (
+            <div key={i} className="flex gap-3 items-center py-3 border-b border-white/5">
+              <i className={`${item.icon} text-indigo-400 text-xl`} />
+              <span className="text-white font-semibold w-24 shrink-0">{item.label} :</span>
+              <span className="text-gray-300">{item.data}</span>
+            </div>
+          ))}
+        </div>
+
+      </section>
+    </div>
+  );
+};
 
 export default About;
